@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -41,17 +42,33 @@
 						<header>
 							<h2 align = "center">Sign up</h2>
 						</header>
-						<form align = "center">
-                            UID:
-                            <input type="text" id="username" name="uid" maxlength = "20"><br>
-                            <!-- <label for="fname">First name:</label> -->
-                            Username:
-                            <input type="text" id="username" name="username" maxlength = "20"><br>
-            
-                            <!-- <label for="lname">Last name:</label> -->
-                            Password<input type="text" id="password" name="password" size = "20"><br><br>
-                            <input type="submit" value="Sign up">
-                        </form>
+						<form method="post" action="signup1.php" align="center">
+
+		  <?php include('errors.php'); ?>
+
+		<div class="input-group">
+			<label>Username</label>
+			<input type="text" name="username" value="<?php echo $username; ?>">
+		</div>
+		<div class="input-group">
+			<label>UID</label>
+			<input type="number" name="uid" value="<?php echo $uid; ?>">
+		</div>
+		<div class="input-group">
+			<label>Password</label>
+			<input type="password" name="password_1">
+		</div>
+		<div class="input-group">
+			<label>Confirm password</label>
+			<input type="password" name="password_2">
+		</div>
+		<div class="input-group">
+			<button type="submit" class="btn" name="reg_user">Register</button>
+		</div>
+		<p>
+			Already a member? <a href="login.php">Sign in</a>
+		</p>
+	</form>
 					</div>
 				</div>
 			</section>
@@ -84,7 +101,7 @@
 						</section>
 					</div>
 					<div class="copyright">
-						&copy; Horizio Inc. 2020</a>.
+						&copy; <a>Horizio Inc. 2020</a>.
 					</div>
 				</div>
 			</footer>
@@ -97,4 +114,9 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+    
+    
+    
+    
+    
 </html>
