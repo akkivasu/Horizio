@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -40,14 +41,15 @@
 						<header>
 							<h2 align = "center">Log in</h2>
 						</header>
-						<form align = "center">
+						<form method="post" action="login1.php" align="center">
+                            <?php include('errors.php'); ?>
                             <!-- <label for="fname">First name:</label> -->
                             Username:
-                            <input type="text" id="username" name="fname" maxlength = "20"><br>
+                            <input type="text" id="username" name="username" maxlength = "20"><br>
             
                             <!-- <label for="lname">Last name:</label> -->
-                            Password<input type="text" id="password" name="lname" size = "20"><br><br>
-                            <input type="submit" value="Log in">
+                            Password<input type="password" id="password" name="password" size = "20"><br><br>
+                            <input type="submit" name="login" value="Log in">
                         </form>
 					</div>
 				</div>
@@ -81,7 +83,7 @@
 						</section>
 					</div>
 					<div class="copyright">
-						&copy; Horizio Inc. 2020</a>.
+						&copy; <a>Horizio Inc. 2020</a>.
 					</div>
 				</div>
 			</footer>
